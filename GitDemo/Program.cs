@@ -7,7 +7,8 @@ namespace GitDemo
         static void Main(string[] args)
         {
             Console.WriteLine("Enter the number of Employees:");
-            int NumUser = Int16.Parse(Console.ReadLine());
+            string NumUserString = Console.ReadLine();
+            int NumUser = Int16.Parse(NumUserString);
             Console.Clear();
             string[] name = new string[NumUser]; 
             int[] salary = new int[NumUser];
@@ -15,18 +16,16 @@ namespace GitDemo
             {
                 Console.WriteLine("Enter your name:");
                 string v = Console.ReadLine();
-                string name[i] = v;
+                name[i] = v;
                 Console.WriteLine("Enter your Salary:");
-                //int salary[i] = Int16.Parse(Console.ReadLine());
+                salary[i] = Int16.Parse(Console.ReadLine());
             }
             Console.Clear();
             for (int i = 0; i < NumUser; i++)
             {
-                //Console.WriteLine(name[i]);
-                Console.WriteLine("");
-                
-                //Console.WriteLine(salary[i]);
-                
+                Console.WriteLine(name[i]+ salary[i]);
+
+
             }
 
 
